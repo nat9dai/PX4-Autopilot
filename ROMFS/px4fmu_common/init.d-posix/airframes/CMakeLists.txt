@@ -114,6 +114,12 @@ px4_add_romfs_files(
 	17001_flightgear_tf-g1
 	17002_flightgear_tf-g2
 
+
+	10021_iris_modified
+	22000_raynor
+
+	22001_gazebo-classic_raynor
+
 	71001_gazebo-classic_spacecraft_dart
 	71002_gz_spacecraft_2d
 

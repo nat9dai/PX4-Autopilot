@@ -1,0 +1,688 @@
+# # #!/bin/sh
+# # #
+# # # @name 3DR Raynor Quadrotor SITL
+# # #
+# # # @type Quadrotor Wide
+# # #
+# # # @maintainer Gao Yichao <yichao_gao@u.nus.edu>
+# # #
+
+# # . ${R}etc/init.d/rc.mc_defaults
+
+
+
+# # param set-default COM_RCL_EXCEPT 4
+# # param set-default EKF2_MAG_DECL 3.058186769485473633
+
+# # param set-default MC_AIRMODE	0
+
+# # param set-default MC_PITCHRATE_D 0.000500000023748726
+# # param set-default MC_PITCHRATE_I 0.000
+# # param set-default MC_PITCHRATE_MAX 1200.0
+# # param set-default MC_PITCHRATE_P 0.050000000745058060
+# # # param set-default MC_PITCHRATE_K 0.80000000000000000
+# # param set-default MC_PITCHRATE_K 1.0000000000000000
+# # param set-default MC_PITCH_P 10.00
+# # param set_default MC_PR_INIT_LIM 0.3000000000000000
+
+# # param set-default MC_ROLLRATE_D 0.000500000023748726
+# # param set-default MC_ROLLRATE_I 0.000
+# # param set-default MC_ROLLRATE_MAX 1200.0
+# # param set-default MC_ROLLRATE_P 0.050000000745058060
+# # # param set-default MC_ROLLRATE_K 0.8000000000000000
+# # param set-default MC_ROLLRATE_K 1.000000000000000
+# # param set-default MC_ROLL_P 10.00
+# # param set_default MC_RR_INIT_LIM 0.3000000000000000
+
+# # param set-default MC_YAW_P 2.8000000190734863281
+# # param set-default MC_YAWRATE_D 0.0000000000000000
+# # param set-default MC_YAWRATE_I 0.100000000000000
+# # param set-default MC_YAWRATE_K 1.000000000000000
+# # param set-default MC_YAWRATE_MAX 1200.000000000000000
+# # # param set-default MC_YAWRATE_P 0.07000000000000000
+# # param set-default MC_YAWRATE_P 0.2000000000000000
+# # param set-default MC_YAW_WEIGHT 0.400000005960464478
+
+# # # param set-default THR_MDL_FAC 0.2000000000000000
+
+
+# # param set-default MPC_ACC_HOR_MAX 12.00
+# # param set-default MPC_ACC_UP_MAX 12.0
+
+# # param set-default MPC_ALT_MODE 2
+# # param set-default MPC_THR_HOVER 0.280000001192092896
+# # param set-default MPC_THR_XY_MARG 0.50
+# # param set-default MPC_TILTMAX_AIR 89.0
+# # param set-default MPC_USE_HTE 0
+# # param set-default MPC_VEL_MANUAL 0.5
+# # param set-default MPC_XY_CRUISE 3.0
+# # param set-default MPC_XY_P 1.386800050735473633
+# # param set-default MPC_XY_VEL_D_ACC 0.00
+# # param set-default MPC_XY_VEL_I_ACC 2.163000106811523438
+# # param set-default MPC_XY_VEL_P_ACC 6.300000190734863281
+# # param set-default MPC_Z_P 1.219699978828430176
+# # param set-default MPC_Z_VEL_I_ACC 1.967700004577636719
+# # param set-default MPC_Z_VEL_MAX_DN 3.0
+# # param set-default MPC_Z_VEL_P_ACC 5.699999809265136719
+# # param set-default MPC_Z_V_AUTO_UP 1.0
+
+
+# # param set-default CA_AIRFRAME 0
+# # param set-default CA_ROTOR_COUNT 4
+# # # param set-default CA_ROTOR0_PX 0.056
+# # # param set-default CA_ROTOR0_PY 0.056
+# # param set-default CA_ROTOR0_PX 0.707
+# # param set-default CA_ROTOR0_PY 0.707
+
+# # # param set-default CA_ROTOR0_PX 0.15
+# # # param set-default CA_ROTOR0_PY 0.15
+# # param set-default CA_ROTOR0_PZ 0.000
+# # param set-default CA_ROTOR0_KM 0.05
+
+# # # param set-default CA_ROTOR1_PX -0.056
+# # # param set-default CA_ROTOR1_PY -0.056
+# # param set-default CA_ROTOR1_PX -0.707
+# # param set-default CA_ROTOR1_PY -0.707
+# # # param set-default CA_ROTOR1_PX -0.15
+# # # param set-default CA_ROTOR1_PY -0.15
+# # param set-default CA_ROTOR1_PZ 0.000
+# # param set-default CA_ROTOR1_KM 0.05
+
+# # # param set-default CA_ROTOR2_PX 0.056
+# # # param set-default CA_ROTOR2_PY -0.056
+# # param set-default CA_ROTOR2_PX 0.707
+# # param set-default CA_ROTOR2_PY -0.707
+# # # param set-default CA_ROTOR2_PX 0.15
+# # # param set-default CA_ROTOR2_PY -0.15
+# # param set-default CA_ROTOR2_PZ 0.000
+# # param set-default CA_ROTOR2_KM -0.05
+
+# # # param set-default CA_ROTOR3_PX -0.056
+# # # param set-default CA_ROTOR3_PY 0.056
+# # param set-default CA_ROTOR3_PX -0.707
+# # param set-default CA_ROTOR3_PY 0.707
+# # # param set-default CA_ROTOR3_PX -0.15
+# # # param set-default CA_ROTOR3_PY 0.15
+# # param set-default CA_ROTOR3_PZ 0.000
+# # param set-default CA_ROTOR3_KM -0.05
+
+# # param set-default CA_ROTOR0_CT 1.0
+# # param set-default CA_ROTOR1_CT 1.0
+# # param set-default CA_ROTOR2_CT 1.0
+# # param set-default CA_ROTOR3_CT 1.0
+
+# # # param set-default CA_ROTOR0_PX 0.1515
+# # # param set-default CA_ROTOR0_PY 0.245
+# # # param set-default CA_ROTOR1_PX -0.1515
+# # # param set-default CA_ROTOR1_PY -0.1875
+# # # param set-default CA_ROTOR2_PX 0.1515
+# # # param set-default CA_ROTOR2_PY -0.245
+# # # param set-default CA_ROTOR3_PX -0.1515
+# # # param set-default CA_ROTOR3_PY 0.1875
+
+# # param set-default PWM_MAIN_FUNC1 101
+# # param set-default PWM_MAIN_FUNC2 102
+# # param set-default PWM_MAIN_FUNC3 103
+# # param set-default PWM_MAIN_FUNC4 104
+
+
+# # #!/bin/sh
+# # #
+# # # @name 3DR Raynor Quadrotor SITL
+# # #
+# # # @type Quadrotor Wide
+# # #
+# # # @maintainer Gao Yichao <yichao_gao@u.nus.edu>
+# # #
+
+# # # . ${R}etc/init.d/rc.mc_defaults
+
+# # # set SYS_AUTOCONFIG 1
+# # # set SYS_AUTOSTART 22001
+# # # set MAV_TYPE 2
+# # # set PX4_SIM_MODEL raynor
+
+# # # param set-default MPC_VELZ_I 0.15
+
+# # # param set-default COM_RCL_EXCEPT 4
+# # # param set-default EKF2_MAG_DECL 3.058186769485473633
+# # # param set-default MC_PITCHRATE_D 0.000500000023748726
+# # # param set-default MC_PITCHRATE_I 0.000
+# # # param set-default MC_PITCHRATE_MAX 1200.0
+# # # param set-default MC_PITCHRATE_P 0.050000000745058060
+# # # param set-default MC_PITCH_P 10.00
+# # # param set-default MC_ROLLRATE_D 0.000500000023748726
+# # # param set-default MC_ROLLRATE_I 0.000
+# # # param set-default MC_ROLLRATE_MAX 1200.0
+# # # param set-default MC_ROLLRATE_P 0.050000000745058060
+# # # param set-default MC_ROLL_P 10.00
+# # # param set-default MC_YAW_P 2.800000190734863281
+# # # param set-default MPC_ACC_HOR_MAX 12.00
+# # # param set-default MPC_ACC_UP_MAX 12.0
+# # # param set-default MPC_ALT_MODE 2
+# # # param set-default MPC_THR_HOVER 0.280000001192092896
+# # # param set-default MPC_THR_XY_MARG 0.50
+# # # param set-default MPC_TILTMAX_AIR 89.0
+# # # param set-default MPC_USE_HTE 0
+# # # param set-default MPC_VEL_MANUAL 0.5
+# # # param set-default MPC_XY_CRUISE 3.0
+# # # param set-default MPC_XY_P 1.386800050735473633
+# # # param set-default MPC_XY_VEL_D_ACC 0.00
+# # # param set-default MPC_XY_VEL_I_ACC 2.163000106811523438
+# # # param set-default MPC_XY_VEL_P_ACC 6.300000190734863281
+# # # param set-default MPC_Z_P 1.219699978828430176
+# # # param set-default MPC_Z_VEL_I_ACC 1.967700004577636719
+# # # param set-default MPC_Z_VEL_MAX_DN 3.0
+# # # param set-default MPC_Z_VEL_P_ACC 5.699999809265136719
+# # # param set-default MPC_Z_V_AUTO_UP 1.0
+
+
+# # # param set-default CA_AIRFRAME 0
+# # # param set-default CA_ROTOR_COUNT 4
+# # # param set-default CA_ROTOR0_PX 0.056
+# # # param set-default CA_ROTOR0_PY 0.056
+# # # param set-default CA_ROTOR0_PZ 0.000
+# # # param set-default CA_ROTOR0_KM 0.0088
+
+# # # param set-default CA_ROTOR1_PX -0.056
+# # # param set-default CA_ROTOR1_PY -0.056
+# # # param set-default CA_ROTOR1_PZ 0.000
+# # # param set-default CA_ROTOR1_KM 0.0088
+
+# # # param set-default CA_ROTOR2_PX 0.056
+# # # param set-default CA_ROTOR2_PY -0.056
+# # # param set-default CA_ROTOR2_PZ 0.000
+# # # param set-default CA_ROTOR2_KM -0.0088
+
+# # # param set-default CA_ROTOR3_PX -0.056
+# # # param set-default CA_ROTOR3_PY 0.056
+# # # param set-default CA_ROTOR3_PZ 0.000
+# # # param set-default CA_ROTOR3_KM -0.0088
+
+# # # param set-default PWM_MAIN_FUNC1 101
+# # # param set-default PWM_MAIN_FUNC2 102
+# # # param set-default PWM_MAIN_FUNC3 103
+# # # param set-default PWM_MAIN_FUNC4 104
+
+
+# # . ${R}etc/init.d/rc.mc_defaults
+
+
+
+# # param set-default COM_RCL_EXCEPT 4
+# # param set-default EKF2_MAG_DECL 3.058186769485473633
+# # param set-default MC_PITCHRATE_D 0.000500000023748726
+# # param set-default MC_PITCHRATE_I 0.000
+# # param set-default MC_PITCHRATE_MAX 1200.0
+# # param set-default MC_PITCHRATE_P 0.050000000745058060
+# # param set-default MC_PITCH_P 10.00
+# # param set-default MC_ROLLRATE_D 0.000500000023748726
+# # param set-default MC_ROLLRATE_I 0.000
+# # param set-default MC_ROLLRATE_MAX 1200.0
+# # param set-default MC_ROLLRATE_P 0.050000000745058060
+# # param set-default MC_ROLL_P 10.00
+# # param set-default MC_YAW_P 2.800000190734863281
+# # param set-default MPC_ACC_HOR_MAX 12.00
+# # param set-default MPC_ACC_UP_MAX 12.0
+# # param set-default MPC_ALT_MODE 2
+# # param set-default MPC_THR_HOVER 0.280000001192092896
+# # param set-default MPC_THR_XY_MARG 0.50
+# # param set-default MPC_TILTMAX_AIR 89.0
+# # param set-default MPC_USE_HTE 0
+# # param set-default MPC_VEL_MANUAL 0.5
+# # param set-default MPC_XY_CRUISE 3.0
+# # param set-default MPC_XY_P 1.386800050735473633
+# # param set-default MPC_XY_VEL_D_ACC 0.00
+# # param set-default MPC_XY_VEL_I_ACC 2.163000106811523438
+# # param set-default MPC_XY_VEL_P_ACC 6.300000190734863281
+# # param set-default MPC_Z_P 1.219699978828430176
+# # param set-default MPC_Z_VEL_I_ACC 1.967700004577636719
+# # param set-default MPC_Z_VEL_MAX_DN 3.0
+# # param set-default MPC_Z_VEL_P_ACC 5.699999809265136719
+# # param set-default MPC_Z_V_AUTO_UP 1.0
+
+
+# # param set-default CA_AIRFRAME 0
+# # param set-default CA_ROTOR_COUNT 4
+# # # param set-default CA_ROTOR0_PX 0.056
+# # # param set-default CA_ROTOR0_PY 0.056
+# # param set-default CA_ROTOR0_PX 0.707
+# # param set-default CA_ROTOR0_PY 0.707
+# # param set-default CA_ROTOR0_PZ 0.000
+# # param set-default CA_ROTOR0_KM 0.0088
+
+# # # param set-default CA_ROTOR1_PX -0.056
+# # # param set-default CA_ROTOR1_PY -0.056
+# # param set-default CA_ROTOR1_PX -0.707
+# # param set-default CA_ROTOR1_PY -0.707
+# # param set-default CA_ROTOR1_PZ 0.000
+# # param set-default CA_ROTOR1_KM 0.0088
+
+# # # param set-default CA_ROTOR2_PX 0.056
+# # # param set-default CA_ROTOR2_PY -0.056
+# # param set-default CA_ROTOR2_PX 0.707
+# # param set-default CA_ROTOR2_PY -0.707
+# # param set-default CA_ROTOR2_PZ 0.000
+# # param set-default CA_ROTOR2_KM -0.0088
+
+# # # param set-default CA_ROTOR3_PX -0.056
+# # # param set-default CA_ROTOR3_PY 0.056
+# # param set-default CA_ROTOR3_PX -0.707
+# # param set-default CA_ROTOR3_PY 0.707
+# # param set-default CA_ROTOR3_PZ 0.000
+# # param set-default CA_ROTOR3_KM -0.0088
+
+# # param set-default PWM_MAIN_FUNC1 101
+# # param set-default PWM_MAIN_FUNC2 102
+# # param set-default PWM_MAIN_FUNC3 103
+# # param set-default PWM_MAIN_FUNC4 104
+
+# # param set-default CA_ROTOR0_CT 8.533674
+# # param set-default CA_ROTOR1_CT 8.533674
+# # param set-default CA_ROTOR2_CT 8.533674
+# # param set-default CA_ROTOR3_CT 8.533674
+
+# # param set-default CA_ROTOR0_PX 0.1515
+# # param set-default CA_ROTOR0_PY 0.245
+# # param set-default CA_ROTOR1_PX -0.1515
+# # param set-default CA_ROTOR1_PY -0.1875
+# # param set-default CA_ROTOR2_PX 0.1515
+# # param set-default CA_ROTOR2_PY -0.245
+# # param set-default CA_ROTOR3_PX -0.1515
+# # param set-default CA_ROTOR3_PY 0.1875
+
+# #!/bin/sh
+# #
+# # @name 3DR Raynor Quadrotor SITL
+# #
+# # @type Quadrotor Wide
+# #
+# # @maintainer Gao Yichao <yichao_gao@u.nus.edu>
+# #
+
+# . ${R}etc/init.d/rc.mc_defaults
+
+
+
+# param set-default COM_RCL_EXCEPT 4
+# param set-default EKF2_MAG_DECL 3.058186769485473633
+
+# param set-default MC_PITCHRATE_D 0.000500000023748726
+# param set-default MC_PITCHRATE_I 0.000
+# param set-default MC_PITCHRATE_MAX 1200.0
+# param set-default MC_PITCHRATE_P 0.050000000745058060
+# param set-default MC_PITCHRATE_K 0.80000000000000000
+# param set-default MC_PITCH_P 5.00
+# param set_default MC_PR_INIT_LIM 0.3000000000000000
+
+# param set-default MC_ROLLRATE_D 0.000500000023748726
+# param set-default MC_ROLLRATE_I 0.000
+# param set-default MC_ROLLRATE_MAX 1200.0
+# param set-default MC_ROLLRATE_P 0.050000000745058060
+# param set-default MC_ROLLRATE_K 0.8000000000000000
+# param set-default MC_ROLL_P 5.00
+# param set_default MC_RR_INIT_LIM 0.3000000000000000
+
+# param set-default MC_YAW_P 3.000000190734863281
+# param set-default MC_YAWRATE_D 0.0000000000000000
+# param set-default MC_YAWRATE_I 0.000500000000000000
+# param set-default MC_YAWRATE_K 1.000000000000000
+# param set-default MC_YAWRATE_MAX 1200.000000000000000
+# param set-default MC_YAWRATE_P 0.07000000000000000
+# param set-default MC_YAW_WEIGHT 0.400000005960464478
+
+# # param set-default THR_MDL_FAC 0.2000000000000000
+
+
+# param set-default MPC_ACC_HOR_MAX 12.00
+# param set-default MPC_ACC_UP_MAX 12.0
+
+# param set-default MPC_ALT_MODE 2
+# param set-default MPC_THR_HOVER 0.280000001192092896
+# param set-default MPC_THR_XY_MARG 0.50
+# param set-default MPC_TILTMAX_AIR 89.0
+# param set-default MPC_USE_HTE 0
+# param set-default MPC_VEL_MANUAL 0.5
+# param set-default MPC_XY_CRUISE 3.0
+# param set-default MPC_XY_P 1.386800050735473633
+# param set-default MPC_XY_VEL_D_ACC 0.00
+# param set-default MPC_XY_VEL_I_ACC 2.163000106811523438
+# param set-default MPC_XY_VEL_P_ACC 6.300000190734863281
+# param set-default MPC_Z_P 1.219699978828430176
+# param set-default MPC_Z_VEL_I_ACC 1.967700004577636719
+# param set-default MPC_Z_VEL_MAX_DN 3.0
+# param set-default MPC_Z_VEL_P_ACC 5.699999809265136719
+# param set-default MPC_Z_V_AUTO_UP 1.0
+
+
+# param set-default CA_AIRFRAME 0
+# param set-default CA_ROTOR_COUNT 4
+# param set-default CA_ROTOR0_PX 0.056
+# param set-default CA_ROTOR0_PY 0.056
+# # param set-default CA_ROTOR0_PX 0.707
+# # param set-default CA_ROTOR0_PY 0.707
+# param set-default CA_ROTOR0_PZ 0.000
+# param set-default CA_ROTOR0_KM 0.0088
+
+# param set-default CA_ROTOR1_PX -0.056
+# param set-default CA_ROTOR1_PY -0.056
+# # # param set-default CA_ROTOR1_PX -0.707
+# # # param set-default CA_ROTOR1_PY -0.707
+# param set-default CA_ROTOR1_PZ 0.000
+# param set-default CA_ROTOR1_KM 0.0088
+
+# param set-default CA_ROTOR2_PX 0.056
+# param set-default CA_ROTOR2_PY -0.056
+# # # param set-default CA_ROTOR2_PX 0.707
+# # # param set-default CA_ROTOR2_PY -0.707
+# param set-default CA_ROTOR2_PZ 0.000
+# param set-default CA_ROTOR2_KM -0.0088
+
+# param set-default CA_ROTOR3_PX -0.056
+# param set-default CA_ROTOR3_PY 0.056
+# # # param set-default CA_ROTOR3_PX -0.707
+# # # param set-default CA_ROTOR3_PY 0.707
+# param set-default CA_ROTOR3_PZ 0.000
+# param set-default CA_ROTOR3_KM -0.0088
+
+# param set-default CA_ROTOR0_CT 8.533674
+# param set-default CA_ROTOR1_CT 8.533674
+# param set-default CA_ROTOR2_CT 8.533674
+# param set-default CA_ROTOR3_CT 8.533674
+
+# # param set-default CA_ROTOR0_PX 0.1515
+# # param set-default CA_ROTOR0_PY 0.245
+# # param set-default CA_ROTOR1_PX -0.1515
+# # param set-default CA_ROTOR1_PY -0.1875
+# # param set-default CA_ROTOR2_PX 0.1515
+# # param set-default CA_ROTOR2_PY -0.245
+# # param set-default CA_ROTOR3_PX -0.1515
+# # param set-default CA_ROTOR3_PY 0.1875
+
+# param set-default PWM_MAIN_FUNC1 101
+# param set-default PWM_MAIN_FUNC2 102
+# param set-default PWM_MAIN_FUNC3 103
+# param set-default PWM_MAIN_FUNC4 104
+
+# #!/bin/sh
+# #
+# # @name 3DR Raynor Quadrotor SITL
+# #
+# # @type Quadrotor Wide
+# #
+# # @maintainer Gao Yichao <yichao_gao@u.nus.edu>
+# #
+
+# # . ${R}etc/init.d/rc.mc_defaults
+
+# # set SYS_AUTOCONFIG 1
+# # set SYS_AUTOSTART 22001
+# # set MAV_TYPE 2
+# # set PX4_SIM_MODEL raynor
+
+# # param set-default MPC_VELZ_I 0.15
+
+# # param set-default COM_RCL_EXCEPT 4
+# # param set-default EKF2_MAG_DECL 3.058186769485473633
+# # param set-default MC_PITCHRATE_D 0.000500000023748726
+# # param set-default MC_PITCHRATE_I 0.000
+# # param set-default MC_PITCHRATE_MAX 1200.0
+# # param set-default MC_PITCHRATE_P 0.050000000745058060
+# # param set-default MC_PITCH_P 10.00
+# # param set-default MC_ROLLRATE_D 0.000500000023748726
+# # param set-default MC_ROLLRATE_I 0.000
+# # param set-default MC_ROLLRATE_MAX 1200.0
+# # param set-default MC_ROLLRATE_P 0.050000000745058060
+# # param set-default MC_ROLL_P 10.00
+# # param set-default MC_YAW_P 2.800000190734863281
+# # param set-default MPC_ACC_HOR_MAX 12.00
+# # param set-default MPC_ACC_UP_MAX 12.0
+# # param set-default MPC_ALT_MODE 2
+# # param set-default MPC_THR_HOVER 0.280000001192092896
+# # param set-default MPC_THR_XY_MARG 0.50
+# # param set-default MPC_TILTMAX_AIR 89.0
+# # param set-default MPC_USE_HTE 0
+# # param set-default MPC_VEL_MANUAL 0.5
+# # param set-default MPC_XY_CRUISE 3.0
+# # param set-default MPC_XY_P 1.386800050735473633
+# # param set-default MPC_XY_VEL_D_ACC 0.00
+# # param set-default MPC_XY_VEL_I_ACC 2.163000106811523438
+# # param set-default MPC_XY_VEL_P_ACC 6.300000190734863281
+# # param set-default MPC_Z_P 1.219699978828430176
+# # param set-default MPC_Z_VEL_I_ACC 1.967700004577636719
+# # param set-default MPC_Z_VEL_MAX_DN 3.0
+# # param set-default MPC_Z_VEL_P_ACC 5.699999809265136719
+# # param set-default MPC_Z_V_AUTO_UP 1.0
+
+
+# # param set-default CA_AIRFRAME 0
+# # param set-default CA_ROTOR_COUNT 4
+# # param set-default CA_ROTOR0_PX 0.056
+# # param set-default CA_ROTOR0_PY 0.056
+# # param set-default CA_ROTOR0_PZ 0.000
+# # param set-default CA_ROTOR0_KM 0.0088
+
+# # param set-default CA_ROTOR1_PX -0.056
+# # param set-default CA_ROTOR1_PY -0.056
+# # param set-default CA_ROTOR1_PZ 0.000
+# # param set-default CA_ROTOR1_KM 0.0088
+
+# # param set-default CA_ROTOR2_PX 0.056
+# # param set-default CA_ROTOR2_PY -0.056
+# # param set-default CA_ROTOR2_PZ 0.000
+# # param set-default CA_ROTOR2_KM -0.0088
+
+# # param set-default CA_ROTOR3_PX -0.056
+# # param set-default CA_ROTOR3_PY 0.056
+# # param set-default CA_ROTOR3_PZ 0.000
+# # param set-default CA_ROTOR3_KM -0.0088
+
+# # param set-default PWM_MAIN_FUNC1 101
+# # param set-default PWM_MAIN_FUNC2 102
+# # param set-default PWM_MAIN_FUNC3 103
+# # param set-default PWM_MAIN_FUNC4 104
+
+
+# . ${R}etc/init.d/rc.mc_defaults
+
+
+
+# param set-default COM_RCL_EXCEPT 4
+# param set-default EKF2_MAG_DECL 3.058186769485473633
+# param set-default MC_PITCHRATE_D 0.000500000023748726
+# param set-default MC_PITCHRATE_I 0.000
+# param set-default MC_PITCHRATE_MAX 1200.0
+# param set-default MC_PITCHRATE_P 0.050000000745058060
+# param set-default MC_PITCH_P 10.00
+# param set-default MC_ROLLRATE_D 0.000500000023748726
+# param set-default MC_ROLLRATE_I 0.000
+# param set-default MC_ROLLRATE_MAX 1200.0
+# param set-default MC_ROLLRATE_P 0.050000000745058060
+# param set-default MC_ROLL_P 10.00
+# param set-default MC_YAW_P 2.800000190734863281
+# param set-default MPC_ACC_HOR_MAX 12.00
+# param set-default MPC_ACC_UP_MAX 12.0
+# param set-default MPC_ALT_MODE 2
+# param set-default MPC_THR_HOVER 0.280000001192092896
+# param set-default MPC_THR_XY_MARG 0.50
+# param set-default MPC_TILTMAX_AIR 89.0
+# param set-default MPC_USE_HTE 0
+# param set-default MPC_VEL_MANUAL 0.5
+# param set-default MPC_XY_CRUISE 3.0
+# param set-default MPC_XY_P 1.386800050735473633
+# param set-default MPC_XY_VEL_D_ACC 0.00
+# param set-default MPC_XY_VEL_I_ACC 2.163000106811523438
+# param set-default MPC_XY_VEL_P_ACC 6.300000190734863281
+# param set-default MPC_Z_P 1.219699978828430176
+# param set-default MPC_Z_VEL_I_ACC 1.967700004577636719
+# param set-default MPC_Z_VEL_MAX_DN 3.0
+# param set-default MPC_Z_VEL_P_ACC 5.699999809265136719
+# param set-default MPC_Z_V_AUTO_UP 1.0
+
+
+# param set-default CA_AIRFRAME 0
+# param set-default CA_ROTOR_COUNT 4
+# # param set-default CA_ROTOR0_PX 0.056
+# # param set-default CA_ROTOR0_PY 0.056
+# param set-default CA_ROTOR0_PX 0.707
+# param set-default CA_ROTOR0_PY 0.707
+# param set-default CA_ROTOR0_PZ 0.000
+# param set-default CA_ROTOR0_KM 0.0088
+
+# # param set-default CA_ROTOR1_PX -0.056
+# # param set-default CA_ROTOR1_PY -0.056
+# param set-default CA_ROTOR1_PX -0.707
+# param set-default CA_ROTOR1_PY -0.707
+# param set-default CA_ROTOR1_PZ 0.000
+# param set-default CA_ROTOR1_KM 0.0088
+
+# # param set-default CA_ROTOR2_PX 0.056
+# # param set-default CA_ROTOR2_PY -0.056
+# param set-default CA_ROTOR2_PX 0.707
+# param set-default CA_ROTOR2_PY -0.707
+# param set-default CA_ROTOR2_PZ 0.000
+# param set-default CA_ROTOR2_KM -0.0088
+
+# # param set-default CA_ROTOR3_PX -0.056
+# # param set-default CA_ROTOR3_PY 0.056
+# param set-default CA_ROTOR3_PX -0.707
+# param set-default CA_ROTOR3_PY 0.707
+# param set-default CA_ROTOR3_PZ 0.000
+# param set-default CA_ROTOR3_KM -0.0088
+
+# param set-default PWM_MAIN_FUNC1 101
+# param set-default PWM_MAIN_FUNC2 102
+# param set-default PWM_MAIN_FUNC3 103
+# param set-default PWM_MAIN_FUNC4 104
+
+# param set-default CA_ROTOR0_CT 8.533674
+# param set-default CA_ROTOR1_CT 8.533674
+# param set-default CA_ROTOR2_CT 8.533674
+# param set-default CA_ROTOR3_CT 8.533674
+
+# param set-default CA_ROTOR0_PX 0.1515
+# param set-default CA_ROTOR0_PY 0.245
+# param set-default CA_ROTOR1_PX -0.1515
+# param set-default CA_ROTOR1_PY -0.1875
+# param set-default CA_ROTOR2_PX 0.1515
+# param set-default CA_ROTOR2_PY -0.245
+# param set-default CA_ROTOR3_PX -0.1515
+# param set-default CA_ROTOR3_PY 0.1875
+
+#!/bin/sh
+#
+# @name 3DR Raynor Quadrotor SITL
+#
+# @type Quadrotor Wide
+#
+# @maintainer Gao Yichao <yichao_gao@u.nus.edu>
+#
+
+. ${R}etc/init.d/rc.mc_defaults
+
+
+
+param set-default COM_RCL_EXCEPT 4
+param set-default EKF2_MAG_DECL 3.058186769485473633
+
+param set-default MC_PITCHRATE_D 0.000500000023748726
+param set-default MC_PITCHRATE_I 0.000
+param set-default MC_PITCHRATE_MAX 1200.0
+param set-default MC_PITCHRATE_P 0.050000000745058060
+param set-default MC_PITCHRATE_K 0.80000000000000000
+param set-default MC_PITCH_P 5.00
+param set_default MC_PR_INIT_LIM 0.3000000000000000
+
+param set-default MC_ROLLRATE_D 0.000500000023748726
+param set-default MC_ROLLRATE_I 0.000
+param set-default MC_ROLLRATE_MAX 1200.0
+param set-default MC_ROLLRATE_P 0.050000000745058060
+param set-default MC_ROLLRATE_K 0.8000000000000000
+param set-default MC_ROLL_P 5.00
+param set_default MC_RR_INIT_LIM 0.3000000000000000
+
+param set-default MC_YAW_P 3.000000190734863281
+param set-default MC_YAWRATE_D 0.0000000000000000
+param set-default MC_YAWRATE_I 0.000500000000000000
+param set-default MC_YAWRATE_K 1.000000000000000
+param set-default MC_YAWRATE_MAX 1200.000000000000000
+param set-default MC_YAWRATE_P 0.07000000000000000
+param set-default MC_YAW_WEIGHT 0.400000005960464478
+
+# param set-default THR_MDL_FAC 0.2000000000000000
+
+
+param set-default MPC_ACC_HOR_MAX 12.00
+param set-default MPC_ACC_UP_MAX 12.0
+
+param set-default MPC_ALT_MODE 2
+param set-default MPC_THR_HOVER 0.280000001192092896
+param set-default MPC_THR_XY_MARG 0.50
+param set-default MPC_TILTMAX_AIR 89.0
+param set-default MPC_USE_HTE 0
+param set-default MPC_VEL_MANUAL 0.5
+param set-default MPC_XY_CRUISE 3.0
+param set-default MPC_XY_P 1.386800050735473633
+param set-default MPC_XY_VEL_D_ACC 0.00
+param set-default MPC_XY_VEL_I_ACC 2.163000106811523438
+param set-default MPC_XY_VEL_P_ACC 6.300000190734863281
+param set-default MPC_Z_P 1.219699978828430176
+param set-default MPC_Z_VEL_I_ACC 1.967700004577636719
+param set-default MPC_Z_VEL_MAX_DN 3.0
+param set-default MPC_Z_VEL_P_ACC 5.699999809265136719
+param set-default MPC_Z_V_AUTO_UP 1.0
+
+
+param set-default CA_AIRFRAME 0
+param set-default CA_ROTOR_COUNT 4
+param set-default CA_ROTOR0_PX 0.056
+param set-default CA_ROTOR0_PY 0.056
+# param set-default CA_ROTOR0_PX 0.707
+# param set-default CA_ROTOR0_PY 0.707
+param set-default CA_ROTOR0_PZ 0.000
+param set-default CA_ROTOR0_KM 0.0088
+
+param set-default CA_ROTOR1_PX -0.056
+param set-default CA_ROTOR1_PY -0.056
+# # param set-default CA_ROTOR1_PX -0.707
+# # param set-default CA_ROTOR1_PY -0.707
+param set-default CA_ROTOR1_PZ 0.000
+param set-default CA_ROTOR1_KM 0.0088
+
+param set-default CA_ROTOR2_PX 0.056
+param set-default CA_ROTOR2_PY -0.056
+# # param set-default CA_ROTOR2_PX 0.707
+# # param set-default CA_ROTOR2_PY -0.707
+param set-default CA_ROTOR2_PZ 0.000
+param set-default CA_ROTOR2_KM -0.0088
+
+param set-default CA_ROTOR3_PX -0.056
+param set-default CA_ROTOR3_PY 0.056
+# # param set-default CA_ROTOR3_PX -0.707
+# # param set-default CA_ROTOR3_PY 0.707
+param set-default CA_ROTOR3_PZ 0.000
+param set-default CA_ROTOR3_KM -0.0088
+
+# param set-default CA_ROTOR0_CT 8.533674
+# param set-default CA_ROTOR1_CT 8.533674
+# param set-default CA_ROTOR2_CT 8.533674
+# param set-default CA_ROTOR3_CT 8.533674
+
+param set-default CA_ROTOR0_CT 1.0
+param set-default CA_ROTOR1_CT 1.0
+param set-default CA_ROTOR2_CT 1.0
+param set-default CA_ROTOR3_CT 1.0
+
+# param set-default CA_ROTOR0_PX 0.1515
+# param set-default CA_ROTOR0_PY 0.245
+# param set-default CA_ROTOR1_PX -0.1515
+# param set-default CA_ROTOR1_PY -0.1875
+# param set-default CA_ROTOR2_PX 0.1515
+# param set-default CA_ROTOR2_PY -0.245
+# param set-default CA_ROTOR3_PX -0.1515
+# param set-default CA_ROTOR3_PY 0.1875
+
+param set-default PWM_MAIN_FUNC1 101
+param set-default PWM_MAIN_FUNC2 102
+param set-default PWM_MAIN_FUNC3 103
+param set-default PWM_MAIN_FUNC4 104
