@@ -119,5 +119,7 @@ px4_add_romfs_files(
 
 	70000_gz_atmos
 
+	10021_iris_modified
+
 	# [22000, 22999] Reserve for custom models
 )

@@ -62,6 +62,11 @@ publications:
   - topic: /fmu/out/vehicle_local_position
     type: px4_msgs::msg::VehicleLocalPosition
 
+  # modified, add the position setpoint
+  - topic: /fmu/out/vehicle_local_position_setpoint
+    type: px4_msgs::msg::VehicleLocalPositionSetpoint
+    # rate_limit: 50.
+
   - topic: /fmu/out/vehicle_odometry
     type: px4_msgs::msg::VehicleOdometry
 
