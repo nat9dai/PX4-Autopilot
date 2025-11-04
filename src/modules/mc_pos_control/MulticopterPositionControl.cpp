@@ -198,6 +198,15 @@ void MulticopterPositionControl::parameters_update(bool force)
 			Vector3f(_param_mpc_xy_vel_p_acc.get(), _param_mpc_xy_vel_p_acc.get(), _param_mpc_z_vel_p_acc.get()),
 			Vector3f(_param_mpc_xy_vel_i_acc.get(), _param_mpc_xy_vel_i_acc.get(), _param_mpc_z_vel_i_acc.get()),
 			Vector3f(_param_mpc_xy_vel_d_acc.get(), _param_mpc_xy_vel_d_acc.get(), _param_mpc_z_vel_d_acc.get()));
+		// Modified
+		_control.setRPTGains(
+			Vector3f(_param_mpc_rpt_xy_wn.get(), _param_mpc_rpt_xy_wn.get(), _param_mpc_rpt_z_wn.get()),
+			Vector3f(_param_mpc_rpt_xy_sigma.get(), _param_mpc_rpt_xy_sigma.get(), _param_mpc_rpt_z_sigma.get()),
+			Vector3f(_param_mpc_rpt_xy_ki.get(), _param_mpc_rpt_xy_ki.get(), _param_mpc_rpt_z_ki.get()),
+			Vector3f(_param_mpc_rpt_xy_eps.get(), _param_mpc_rpt_xy_eps.get(), _param_mpc_rpt_z_eps.get()),
+			_param_mpc_rpt_max_xy_integration.get(),
+			Vector3f(_param_mpc_rpt_rotor_drag_x.get(),_param_mpc_rpt_rotor_drag_y.get(),_param_mpc_rpt_rotor_drag_z.get())
+		);
 		_control.setHorizontalThrustMargin(_param_mpc_thr_xy_marg.get());
 		_control.decoupleHorizontalAndVecticalAcceleration(_param_mpc_acc_decouple.get());
 		_goto_control.setParamMpcAccHor(_param_mpc_acc_hor.get());

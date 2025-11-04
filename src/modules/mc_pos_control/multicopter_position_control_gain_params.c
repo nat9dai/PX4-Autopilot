@@ -45,6 +45,34 @@
 PARAM_DEFINE_FLOAT(MPC_Z_P, 1.f);
 
 /**
+ * RPT controller natural frequency: default value is 0.5
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_Z_WN, 1.2f);
+
+/**
+ * RPT controller damping ratio: default value is 1.1*1.5
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_Z_SIGMA, 2.00f); //1.1 * 1.5
+
+/**
+ * RPT controller pole placement: default value is 0.8*1.5
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_Z_KI, 0.15f); //0.8*1.5
+
+/**
+ * RPT controller settling time: default value is 0.3
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_Z_EPS, 0.3f);
+
+/**
  * Proportional gain for horizontal position error
  *
  * Defined as corrective velocity in m/s per m position error
@@ -56,6 +84,60 @@ PARAM_DEFINE_FLOAT(MPC_Z_P, 1.f);
  * @group Multicopter Position Control
  */
 PARAM_DEFINE_FLOAT(MPC_XY_P, 0.95f);
+
+/**
+ * RPT controller natural frequency: default value is 0.4
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_XY_WN, 1.45f);
+
+/**
+ * RPT controller damping ratio: default value is 1.1*1.5
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_XY_SIGMA, 0.70f); //1.1 * 1.5
+
+/**
+ * RPT controller pole placement: default value is 0.8*1.5
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_XY_KI, 0.15f); //0.8*1.5
+
+/**
+ * RPT controller settling time: default value is 0.4
+ * @decimal 2
+ *
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_XY_EPS, 0.3f);
+
+
+/**
+ * RPT controller XY integration limit: default value is 0.5
+ * @decimal 2
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_XY_MAX_I,3.0f);
+
+
+/**
+ * RPT controller rotor drag X default value is 0.0
+ * @decimal 2
+ */
+
+PARAM_DEFINE_FLOAT(MPC_RPT_R_DRAG_X,0.35f);
+/**
+ * RPT controller rotor drag Y default value is 0.0
+ * @decimal 2
+ */
+
+PARAM_DEFINE_FLOAT(MPC_RPT_R_DRAG_Y,0.33f);
+/**
+ * RPT controller rotor drag Z default value is 0.0
+ * @decimal 2
+ */
+PARAM_DEFINE_FLOAT(MPC_RPT_R_DRAG_Z,0.0f);
 
 /**
  * Proportional gain for vertical velocity error

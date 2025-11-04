@@ -151,6 +151,25 @@ private:
 		(ParamBool<px4::params::MPC_USE_HTE>)       _param_mpc_use_hte,
 		(ParamBool<px4::params::MPC_ACC_DECOUPLE>)  _param_mpc_acc_decouple,
 
+		//RPT parameters
+		(ParamFloat<px4::params::MPC_RPT_XY_WN>)    _param_mpc_rpt_xy_wn,
+		(ParamFloat<px4::params::MPC_RPT_Z_WN>)     _param_mpc_rpt_z_wn,
+
+		(ParamFloat<px4::params::MPC_RPT_XY_SIGMA>)  _param_mpc_rpt_xy_sigma,
+		(ParamFloat<px4::params::MPC_RPT_Z_SIGMA>)   _param_mpc_rpt_z_sigma,
+
+		(ParamFloat<px4::params::MPC_RPT_XY_KI>)    _param_mpc_rpt_xy_ki,
+		(ParamFloat<px4::params::MPC_RPT_Z_KI>)     _param_mpc_rpt_z_ki,
+
+		(ParamFloat<px4::params::MPC_RPT_XY_EPS>)    _param_mpc_rpt_xy_eps,
+		(ParamFloat<px4::params::MPC_RPT_Z_EPS>)     _param_mpc_rpt_z_eps,
+
+		(ParamFloat<px4::params::MPC_RPT_XY_MAX_I>)    _param_mpc_rpt_max_xy_integration,
+
+		(ParamFloat<px4::params::MPC_RPT_R_DRAG_X>)     _param_mpc_rpt_rotor_drag_x,
+		(ParamFloat<px4::params::MPC_RPT_R_DRAG_Y>)     _param_mpc_rpt_rotor_drag_y,
+		(ParamFloat<px4::params::MPC_RPT_R_DRAG_Z>)     _param_mpc_rpt_rotor_drag_z,
+
 		(ParamFloat<px4::params::MPC_VEL_LP>)       _param_mpc_vel_lp,
 		(ParamFloat<px4::params::MPC_VEL_NF_FRQ>)   _param_mpc_vel_nf_frq,
 		(ParamFloat<px4::params::MPC_VEL_NF_BW>)    _param_mpc_vel_nf_bw,
