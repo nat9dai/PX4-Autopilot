@@ -198,6 +198,15 @@ void MulticopterPositionControl::parameters_update(bool force)
 			Vector3f(_param_mpc_xy_vel_p_acc.get(), _param_mpc_xy_vel_p_acc.get(), _param_mpc_z_vel_p_acc.get()),
 			Vector3f(_param_mpc_xy_vel_i_acc.get(), _param_mpc_xy_vel_i_acc.get(), _param_mpc_z_vel_i_acc.get()),
 			Vector3f(_param_mpc_xy_vel_d_acc.get(), _param_mpc_xy_vel_d_acc.get(), _param_mpc_z_vel_d_acc.get()));
+		// Modified
+		_control.setRPTGains(
+			Vector3f(_param_mpc_rpt_xy_wn.get(), _param_mpc_rpt_xy_wn.get(), _param_mpc_rpt_z_wn.get()),
+			Vector3f(_param_mpc_rpt_xy_sigma.get(), _param_mpc_rpt_xy_sigma.get(), _param_mpc_rpt_z_sigma.get()),
+			Vector3f(_param_mpc_rpt_xy_ki.get(), _param_mpc_rpt_xy_ki.get(), _param_mpc_rpt_z_ki.get()),
+			Vector3f(_param_mpc_rpt_xy_eps.get(), _param_mpc_rpt_xy_eps.get(), _param_mpc_rpt_z_eps.get()),
+			_param_mpc_rpt_max_xy_integration.get(),
+			Vector3f(_param_mpc_rpt_rotor_drag_x.get(),_param_mpc_rpt_rotor_drag_y.get(),_param_mpc_rpt_rotor_drag_z.get())
+		);
 		_control.setHorizontalThrustMargin(_param_mpc_thr_xy_marg.get());
 		_control.decoupleHorizontalAndVecticalAcceleration(_param_mpc_acc_decouple.get());
 		_goto_control.setParamMpcAccHor(_param_mpc_acc_hor.get());
@@ -426,9 +435,12 @@ void MulticopterPositionControl::Run()
 
 		PositionControlStates states{set_vehicle_states(vehicle_local_position, dt)};
 
-		// if a goto setpoint available this publishes a trajectory setpoint to go there
-		if (_goto_control.checkForSetpoint(vehicle_local_position.timestamp_sample,
-						   _vehicle_control_mode.flag_multicopter_position_control_enabled)) {
+		// If a goto setpoint is available this publishes a trajectory setpoint to go there
+		// If trajectory_setpoint is published elsewhere, do not use the goto setpoint
+		const bool goto_setpoint_enable = _vehicle_control_mode.flag_multicopter_position_control_enabled
+						  && !_trajectory_setpoint_sub.updated();
+
+		if (_goto_control.checkForSetpoint(vehicle_local_position.timestamp_sample, goto_setpoint_enable)) {
 			_goto_control.update(dt, states.position, states.yaw);
 		}
 
