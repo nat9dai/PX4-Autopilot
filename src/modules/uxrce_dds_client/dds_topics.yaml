@@ -5,20 +5,20 @@
 #####
 publications:
 
-  - topic: /fmu/out/register_ext_component_reply
-    type: px4_msgs::msg::RegisterExtComponentReply
+  # - topic: /fmu/out/register_ext_component_reply
+  #   type: px4_msgs::msg::RegisterExtComponentReply
 
-  - topic: /fmu/out/arming_check_request
-    type: px4_msgs::msg::ArmingCheckRequest
+  # - topic: /fmu/out/arming_check_request
+  #   type: px4_msgs::msg::ArmingCheckRequest
 
-  - topic: /fmu/out/mode_completed
-    type: px4_msgs::msg::ModeCompleted
+  # - topic: /fmu/out/mode_completed
+  #   type: px4_msgs::msg::ModeCompleted
 
-  - topic: /fmu/out/battery_status
-    type: px4_msgs::msg::BatteryStatus
+  # - topic: /fmu/out/battery_status
+  #   type: px4_msgs::msg::BatteryStatus
 
-  - topic: /fmu/out/collision_constraints
-    type: px4_msgs::msg::CollisionConstraints
+  # - topic: /fmu/out/collision_constraints
+  #   type: px4_msgs::msg::CollisionConstraints
 
   - topic: /fmu/out/estimator_status_flags
     type: px4_msgs::msg::EstimatorStatusFlags
@@ -26,14 +26,14 @@ publications:
   - topic: /fmu/out/failsafe_flags
     type: px4_msgs::msg::FailsafeFlags
 
-  - topic: /fmu/out/manual_control_setpoint
-    type: px4_msgs::msg::ManualControlSetpoint
+  # - topic: /fmu/out/manual_control_setpoint
+  #   type: px4_msgs::msg::ManualControlSetpoint
 
-  - topic: /fmu/out/message_format_response
-    type: px4_msgs::msg::MessageFormatResponse
+  # - topic: /fmu/out/message_format_response
+  #   type: px4_msgs::msg::MessageFormatResponse
 
-  - topic: /fmu/out/position_setpoint_triplet
-    type: px4_msgs::msg::PositionSetpointTriplet
+  # - topic: /fmu/out/position_setpoint_triplet
+  #   type: px4_msgs::msg::PositionSetpointTriplet
 
   - topic: /fmu/out/sensor_combined
     type: px4_msgs::msg::SensorCombined
@@ -44,8 +44,8 @@ publications:
   # - topic: /fmu/out/vehicle_angular_velocity
   #   type: px4_msgs::msg::VehicleAngularVelocity
 
-  - topic: /fmu/out/vehicle_land_detected
-    type: px4_msgs::msg::VehicleLandDetected
+  # - topic: /fmu/out/vehicle_land_detected
+  #   type: px4_msgs::msg::VehicleLandDetected
 
   - topic: /fmu/out/vehicle_attitude
     type: px4_msgs::msg::VehicleAttitude
@@ -56,11 +56,11 @@ publications:
   - topic: /fmu/out/vehicle_command_ack
     type: px4_msgs::msg::VehicleCommandAck
 
-  - topic: /fmu/out/vehicle_global_position
-    type: px4_msgs::msg::VehicleGlobalPosition
+  # - topic: /fmu/out/vehicle_global_position
+  #   type: px4_msgs::msg::VehicleGlobalPosition
 
-  - topic: /fmu/out/vehicle_gps_position
-    type: px4_msgs::msg::SensorGps
+  # - topic: /fmu/out/vehicle_gps_position
+  #   type: px4_msgs::msg::SensorGps
 
   - topic: /fmu/out/vehicle_local_position
     type: px4_msgs::msg::VehicleLocalPosition
@@ -71,31 +71,31 @@ publications:
   - topic: /fmu/out/vehicle_status
     type: px4_msgs::msg::VehicleStatus
 
-  - topic: /fmu/out/airspeed_validated
-    type: px4_msgs::msg::AirspeedValidated
+  # - topic: /fmu/out/airspeed_validated
+  #   type: px4_msgs::msg::AirspeedValidated
 
-  - topic: /fmu/out/vtol_vehicle_status
-    type: px4_msgs::msg::VtolVehicleStatus
+  # - topic: /fmu/out/vtol_vehicle_status
+  #   type: px4_msgs::msg::VtolVehicleStatus
 
-  - topic: /fmu/out/home_position
-    type: px4_msgs::msg::HomePosition
+  # - topic: /fmu/out/home_position
+  #   type: px4_msgs::msg::HomePosition
 
 # Create uORB::Publication
 subscriptions:
-  - topic: /fmu/in/register_ext_component_request
-    type: px4_msgs::msg::RegisterExtComponentRequest
+  # - topic: /fmu/in/register_ext_component_request
+  #   type: px4_msgs::msg::RegisterExtComponentRequest
 
-  - topic: /fmu/in/unregister_ext_component
-    type: px4_msgs::msg::UnregisterExtComponent
+  # - topic: /fmu/in/unregister_ext_component
+  #   type: px4_msgs::msg::UnregisterExtComponent
 
-  - topic: /fmu/in/config_overrides_request
-    type: px4_msgs::msg::ConfigOverrides
+  # - topic: /fmu/in/config_overrides_request
+  #   type: px4_msgs::msg::ConfigOverrides
 
   - topic: /fmu/in/arming_check_reply
     type: px4_msgs::msg::ArmingCheckReply
 
-  - topic: /fmu/in/message_format_request
-    type: px4_msgs::msg::MessageFormatRequest
+  # - topic: /fmu/in/message_format_request
+  #   type: px4_msgs::msg::MessageFormatRequest
 
   - topic: /fmu/in/mode_completed
     type: px4_msgs::msg::ModeCompleted
@@ -115,8 +115,8 @@ subscriptions:
   - topic: /fmu/in/onboard_computer_status
     type: px4_msgs::msg::OnboardComputerStatus
 
-  - topic: /fmu/in/obstacle_distance
-    type: px4_msgs::msg::ObstacleDistance
+  # - topic: /fmu/in/obstacle_distance
+  #   type: px4_msgs::msg::ObstacleDistance
 
   - topic: /fmu/in/sensor_optical_flow
     type: px4_msgs::msg::SensorOpticalFlow
@@ -160,8 +160,8 @@ subscriptions:
   - topic: /fmu/in/actuator_servos
     type: px4_msgs::msg::ActuatorServos
 
-  - topic: /fmu/in/aux_global_position
-    type: px4_msgs::msg::VehicleGlobalPosition
+  # - topic: /fmu/in/aux_global_position
+  #   type: px4_msgs::msg::VehicleGlobalPosition
 
 # Create uORB::PublicationMulti
 subscriptions_multi:
