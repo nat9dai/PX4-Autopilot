@@ -121,10 +121,16 @@ if [ -n "${PX4_SIM_MODEL#*gz_}" ] && [ -z "${PX4_GZ_MODEL_NAME}" ]; then
 
 	echo "INFO  [init] Spawning model"
 
+	# Locate model SDF: prefer PX4_GZ_MODELS, then PX4_GZ_EXTRA_MODELS
+	MODEL_SDF="${PX4_GZ_MODELS}/${MODEL_NAME}/model.sdf"
+	if [ ! -f "${MODEL_SDF}" ] && [ -n "${PX4_GZ_EXTRA_MODELS}" ]; then
+		MODEL_SDF="${PX4_GZ_EXTRA_MODELS}/${MODEL_NAME}/model.sdf"
+	fi
+
 	# Spawn model
 	${gz_command} service -s "/world/${PX4_GZ_WORLD}/create" --reqtype gz.msgs.EntityFactory \
 			--reptype gz.msgs.Boolean --timeout 5000 \
-			--req "sdf_filename: \"${PX4_GZ_MODELS}/${MODEL_NAME}/model.sdf\", name: \"${MODEL_NAME_INSTANCE}\", allow_renaming: false${POSE_ARG}" > /dev/null 2>&1
+			--req "sdf_filename: \"${MODEL_SDF}\", name: \"${MODEL_NAME_INSTANCE}\", allow_renaming: false${POSE_ARG}" > /dev/null 2>&1
 
 	# Wait for model to spawn
 	sleep 1
