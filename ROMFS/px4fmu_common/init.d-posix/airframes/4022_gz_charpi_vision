@@ -76,7 +76,7 @@ param set-default MC_ROLLRATE_P   0.1
 param set-default MC_ROLLRATE_I   0.15
 param set-default MC_ROLLRATE_D   0.0018
 param set-default MC_ROLLRATE_FF  0.0
-param set-default MC_ROLLRATE_MAX 220
+param set-default MC_ROLLRATE_MAX 1200
 param set-default MC_RR_INT_LIM   0.3
 
 param set-default MC_PITCHRATE_K   0.6
@@ -84,7 +84,7 @@ param set-default MC_PITCHRATE_P   0.15
 param set-default MC_PITCHRATE_I   0.15
 param set-default MC_PITCHRATE_D   0.0024
 param set-default MC_PITCHRATE_FF  0.0
-param set-default MC_PITCHRATE_MAX 220
+param set-default MC_PITCHRATE_MAX 1200
 param set-default MC_PR_INT_LIM    0.3
 
 param set-default MC_YAWRATE_K   0.5
@@ -92,7 +92,7 @@ param set-default MC_YAWRATE_P   0.2
 param set-default MC_YAWRATE_I   0.1
 param set-default MC_YAWRATE_D   0.0
 param set-default MC_YAWRATE_FF  0.0
-param set-default MC_YAWRATE_MAX 200
+param set-default MC_YAWRATE_MAX 300
 param set-default MC_YAW_WEIGHT  0.4
 
 # ---- Other "safe" params imported from real drone (no SITL conflict) ----
