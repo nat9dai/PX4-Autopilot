@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Static traversal gate (WHITE). Opening normal = model +x; opening in the model
+  y-z plane. The frame is a closed rectangular ring spanning the INNER opening to
+  the OUTER boundary, matching the real gate:
+      inner  0.600 (y) x 0.250 (z) m   == GATE_WIDTH x GATE_HEIGHT in
+                                           dva-quad-jax (envs/tasks/gate_traversal_real.py)
+      outer  0.738 (y) x 0.350 (z) m
+  So the side (left/right) bars are (0.738-0.600)/2 = 0.069 m thick and the
+  top/bottom bars are (0.350-0.250)/2 = 0.050 m thick. Depth (x) = 0.05 m. The
+  bars' INNER edges are exactly +/-0.30 (y) and +/-0.125 (z), so the policy's
+  gate corners (the inner opening) coincide with the physical opening; the outer
+  edges are +/-0.369 (y) and +/-0.175 (z). Visual only (no collision); the
+  drone never touches it, the policy threads the inner opening.
+
+  Position/orient this whole model from the world <include> <pose>
+  (x y z roll pitch yaw): the gate roll goes in the roll field, the
+  approach-perpendicular heading in the yaw field.
+-->
+<sdf version="1.9">
+  <model name="gate">
+    <static>true</static>
+    <link name="frame">
+      <!-- Top bar: inner edge z=+0.125, outer z=+0.175; spans full outer width. -->
+      <visual name="top_visual">
+        <pose>0 0 0.15 0 0 0</pose>
+        <geometry><box><size>0.05 0.738 0.05</size></box></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.6 0.6 0.6 1</specular>
+        </material>
+      </visual>
+
+      <!-- Bottom bar: inner edge z=-0.125, outer z=-0.175. -->
+      <visual name="bottom_visual">
+        <pose>0 0 -0.15 0 0 0</pose>
+        <geometry><box><size>0.05 0.738 0.05</size></box></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.6 0.6 0.6 1</specular>
+        </material>
+      </visual>
+
+      <!-- Left bar: inner edge y=-0.30, outer y=-0.369; spans inner height in z. -->
+      <visual name="left_visual">
+        <pose>0 -0.3345 0 0 0 0</pose>
+        <geometry><box><size>0.05 0.069 0.25</size></box></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.6 0.6 0.6 1</specular>
+        </material>
+      </visual>
+
+      <!-- Right bar: inner edge y=+0.30, outer y=+0.369. -->
+      <visual name="right_visual">
+        <pose>0 0.3345 0 0 0 0</pose>
+        <geometry><box><size>0.05 0.069 0.25</size></box></geometry>
+        <material>
+          <ambient>0.9 0.9 0.9 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0.6 0.6 0.6 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
