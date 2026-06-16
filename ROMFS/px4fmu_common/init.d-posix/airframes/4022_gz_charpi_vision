@@ -87,10 +87,13 @@ param set-default MC_PITCHRATE_FF  0.0
 param set-default MC_PITCHRATE_MAX 1200
 param set-default MC_PR_INT_LIM    0.3
 
-param set-default MC_YAWRATE_K   0.5
-param set-default MC_YAWRATE_P   0.2
+# 2026-06-16 sim2real: gz momentConstant raised 0.0121->0.05 (match CA_ROTOR_KM +
+# real yaw authority); add yaw-rate D so the faster loop is overdamped like the real
+# drone (yaw wn~40, zeta~1.65) instead of overshooting. Tune P/D to match real CTBR.
+param set-default MC_YAWRATE_K   0.6
+param set-default MC_YAWRATE_P   0.25
 param set-default MC_YAWRATE_I   0.1
-param set-default MC_YAWRATE_D   0.0
+param set-default MC_YAWRATE_D   0.02
 param set-default MC_YAWRATE_FF  0.0
 param set-default MC_YAWRATE_MAX 300
 param set-default MC_YAW_WEIGHT  0.4

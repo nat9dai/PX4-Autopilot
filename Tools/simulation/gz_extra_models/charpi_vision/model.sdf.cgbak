@@ -5,7 +5,7 @@
     <static>false</static>
     <link name='base_link'>
       <inertial>
-        <pose>-0.0072570691642601104 -0.00027070918143539129 0.0086801590028867254 0 0 0</pose>
+        <pose>-0.0072570691642601104 -0.00027070918143539129 0.072180159002886726 0 0 0</pose>
         <mass>1.10</mass>
         <inertia>
           <ixx>0.006</ixx>
@@ -17,7 +17,7 @@
         </inertia>
       </inertial>
       <collision name='base_footprint_fixed_joint_lump__base_link_collision'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -37,7 +37,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__landing_gear_2_1_collision_1'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -57,7 +57,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__landing_gear_3_1_collision_2'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -77,7 +77,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__landing_gear_4_1_collision_3'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -97,7 +97,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__landing_gear_1_1_collision_4'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -117,7 +117,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__fcu_1_collision_5'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -137,7 +137,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__base_spacer_2_1_collision_6'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -157,7 +157,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__base_spacer_3_1_collision_7'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -177,7 +177,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__base_spacer_4_1_collision_8'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -197,7 +197,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__base_spacer_1_1_collision_9'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -217,7 +217,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_lower_plate_1_collision_10'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -237,7 +237,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__arm_2_1_collision_11'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -257,7 +257,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__motor_4_1_collision_12'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -277,7 +277,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__arm_1_1_collision_13'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -297,7 +297,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__motor_3_1_collision_14'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -317,7 +317,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__arm_left_1_collision_15'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -337,7 +337,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__arm_4_1_collision_16'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -357,7 +357,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_upper_plate_1_collision_17'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -377,7 +377,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_spacer_6_1_collision_18'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -397,7 +397,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_spacer_4_1_collision_19'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -417,7 +417,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_spacer_2_1_collision_20'>
-        <pose>1.040834404171797e-17 3.8231982451792341e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>1.040834404171797e-17 3.8231982451792341e-23 8.6732350601180273e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -437,7 +437,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_spacer_1_1_collision_21'>
-        <pose>1.040834404171797e-17 3.8231982451792341e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>1.040834404171797e-17 3.8231982451792341e-23 8.6732350601180273e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -457,7 +457,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_spacer_3_1_collision_22'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -477,7 +477,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__middle_spacer_5_1_collision_23'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -497,7 +497,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__top_plate_1_collision_24'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -517,7 +517,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_mounting_front_1_collision_25'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -537,7 +537,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_driver_mounting_1_collision_26'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -557,7 +557,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_front_left_1_collision_27'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -577,7 +577,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_guard_front_left_1_collision_28'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -597,7 +597,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_front_right_1_collision_29'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -617,7 +617,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_guard_front_right_1_collision_30'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -637,7 +637,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_mounting_rear_1_collision_31'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -657,7 +657,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_rear_left_1_collision_32'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -677,7 +677,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_guard_rear_left_1_collision_33'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -697,7 +697,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_rear_right_1_collision_34'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -717,7 +717,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__camera_guard_rear_right_1_collision_35'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -737,7 +737,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__battery_1_collision_36'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -757,7 +757,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__jetson_orin_1_collision_37'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -777,7 +777,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__motor_1_1_collision_38'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -797,7 +797,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__arm_right_1_collision_39'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -817,7 +817,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__arm_3_1_collision_40'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -837,7 +837,7 @@
         </surface>
       </collision>
       <collision name='base_footprint_fixed_joint_lump__motor_2_1_collision_41'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
@@ -857,7 +857,7 @@
         </surface>
       </collision>
       <visual name='base_footprint_fixed_joint_lump__base_link_visual'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -866,7 +866,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__landing_gear_2_1_visual_1'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -875,7 +875,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__landing_gear_3_1_visual_2'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -884,7 +884,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__landing_gear_4_1_visual_3'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -893,7 +893,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__landing_gear_1_1_visual_4'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -902,7 +902,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__fcu_1_visual_5'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -911,7 +911,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__base_spacer_2_1_visual_6'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -920,7 +920,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__base_spacer_3_1_visual_7'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -929,7 +929,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__base_spacer_4_1_visual_8'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -938,7 +938,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__base_spacer_1_1_visual_9'>
-        <pose>0 0 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>0 0 0 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -947,7 +947,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_lower_plate_1_visual_10'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -956,7 +956,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__arm_2_1_visual_11'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -965,7 +965,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__motor_4_1_visual_12'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -974,7 +974,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__arm_1_1_visual_13'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -983,7 +983,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__motor_3_1_visual_14'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -992,7 +992,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__arm_left_1_visual_15'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1001,7 +1001,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__arm_4_1_visual_16'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1010,7 +1010,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_upper_plate_1_visual_17'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1019,7 +1019,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_spacer_6_1_visual_18'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1028,7 +1028,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_spacer_4_1_visual_19'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1037,7 +1037,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_spacer_2_1_visual_20'>
-        <pose>1.040834404171797e-17 3.8231982451792341e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>1.040834404171797e-17 3.8231982451792341e-23 8.6732350601180273e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1046,7 +1046,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_spacer_1_1_visual_21'>
-        <pose>1.040834404171797e-17 3.8231982451792341e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>1.040834404171797e-17 3.8231982451792341e-23 8.6732350601180273e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1055,7 +1055,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_spacer_3_1_visual_22'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1064,7 +1064,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__middle_spacer_5_1_visual_23'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1073,7 +1073,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__top_plate_1_visual_24'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1082,7 +1082,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_mounting_front_1_visual_25'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1091,7 +1091,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_driver_mounting_1_visual_26'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1100,7 +1100,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_front_left_1_visual_27'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1109,7 +1109,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_guard_front_left_1_visual_28'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1118,7 +1118,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_front_right_1_visual_29'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1127,7 +1127,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_guard_front_right_1_visual_30'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1136,7 +1136,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_mounting_rear_1_visual_31'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1145,7 +1145,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_rear_left_1_visual_32'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1154,7 +1154,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_guard_rear_left_1_visual_33'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1163,7 +1163,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_rear_right_1_visual_34'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1172,7 +1172,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__camera_guard_rear_right_1_visual_35'>
-        <pose>-3.469443765909241e-18 -1.274397854684143e-23 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>-3.469443765909241e-18 -1.274397854684143e-23 8.673744819728029e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1181,7 +1181,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__battery_1_visual_36'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1190,7 +1190,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__jetson_orin_1_visual_37'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1199,7 +1199,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__motor_1_1_visual_38'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1208,7 +1208,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__arm_right_1_visual_39'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1217,7 +1217,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__arm_3_1_visual_40'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1226,7 +1226,7 @@
         </geometry>
       </visual>
       <visual name='base_footprint_fixed_joint_lump__motor_2_1_visual_41'>
-        <pose>3.1859975624386849e-24 1.17027207140746e-29 -0.063500000000000001 1.5708 -5.5511151231257827e-17 1.5708</pose>
+        <pose>3.1859975624386849e-24 1.17027207140746e-29 8.6736173798255219e-19 1.5708 -5.5511151231257827e-17 1.5708</pose>
         <geometry>
           <mesh>
             <scale>0.01 0.01 0.01</scale>
@@ -1322,7 +1322,7 @@
       </axis>
     </joint>
     <link name='prop_front_left_1'>
-      <pose>0.1 0.1 -0.0235 0 0 0</pose>
+      <pose>0.1 0.1 0.04 0 0 0</pose>
       <inertial>
         <pose>5.6539282934642277e-07 -0.0026150379203323799 -6.5500770386750506e-07 0 0 0</pose>
         <mass>0.003</mass>
@@ -1362,7 +1362,7 @@
       </axis>
     </joint>
     <link name='prop_rear_left_1'>
-      <pose>-0.1 0.1 -0.0235 0 0 0</pose>
+      <pose>-0.1 0.1 0.04 0 0 0</pose>
       <inertial>
         <pose>-7.9761415209683717e-06 -0.0025188815096594541 7.1636802549679413e-06 0 0 0</pose>
         <mass>0.003</mass>
@@ -1402,7 +1402,7 @@
       </axis>
     </joint>
     <link name='prop_rear_right_1'>
-      <pose>-0.1 -0.1 -0.0235 0 0 0</pose>
+      <pose>-0.1 -0.1 0.04 0 0 0</pose>
       <inertial>
         <pose>-4.2594990288663537e-06 -0.002615037920332366 -5.4798995622190594e-06 0 0 0</pose>
         <mass>0.003</mass>
@@ -1442,7 +1442,7 @@
       </axis>
     </joint>
     <link name='prop_front_right_1'>
-      <pose>0.1 -0.1 -0.0235 0 0 0</pose>
+      <pose>0.1 -0.1 0.04 0 0 0</pose>
       <inertial>
         <pose>7.5005616942819256e-06 -0.002618881509659457 -8.3130229604211348e-06 0 0 0</pose>
         <mass>0.003</mass>
@@ -1799,17 +1799,13 @@
       filename="gz-sim-odometry-publisher-system"
       name="gz::sim::systems::OdometryPublisher">
       <dimensions>3</dimensions>
-      <!-- 2026-06-16 sim2real CG re-centre: this publisher reports the MODEL frame
-           (__model__), which gz-sim anchors to the canonical link AND the spawn — so it
-           CANNOT be moved by re-posing base_link or by <robot_base_frame> (both verified
-           no-ops), and <xyz_offset> is only world-frame (fixes vertical, not the 45°-bank
-           lateral). Instead the whole BODY GEOMETRY was shifted DOWN 0.0635 m (base_link's
-           inertial/collision/visual children z-=0.0635, plus the 4 prop links z 0.04→-0.0235)
-           so the box CENTRE coincides with __model__. The publisher therefore reports the
-           CG, body-frame (rotates with attitude) → obs + clean-pass box + RViZ cuboid all
-           CG-referenced, no plugin offset, no node param. REQUIRES spawning 6.4 cm higher:
-           PX4_GZ_MODEL_POSE z=0.0635 (else the box bottom spawns in the ground & EKF stalls).
-           SITL 45° clean-pass: 0/4 (before) → 4/4 (after). See envs/GATE_SIM2REAL.md §9. -->
+      <!-- 2026-06-16 sim2real: the CG re-centre is done by re-posing the canonical
+           base_link frame to the box centre (restructure_cg.py), so the DEFAULT reported
+           pose is CG-referenced AND body-frame (rotates with attitude) — fixing the obs,
+           the clean-pass box, and the RViZ cuboid together, with no plugin offset and no
+           node param. (A world-frame <xyz_offset> was tried first but only fixed the
+           vertical, not the 45°-bank lateral.) See envs/GATE_SIM2REAL.md §9. -->
+
       <!-- Match real-charpi mocap rate (~200 Hz) so EKF2 velocity-fusion
            tracks body-rate excitations cleanly. Default 50 Hz is too slow
            during chirp/step/doublet. -->
