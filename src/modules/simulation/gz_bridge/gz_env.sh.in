@@ -11,9 +11,16 @@
 # https://gazebosim.org/api/sim/8/server_config.html
 # -----------------------------------------------------------------------
 
-export PX4_GZ_MODELS=@PX4_SOURCE_DIR@/Tools/simulation/gz/models
-export PX4_GZ_WORLDS=@PX4_SOURCE_DIR@/Tools/simulation/gz/worlds
-export PX4_GZ_EXTRA_MODELS=@PX4_SOURCE_DIR@/Tools/simulation/gz_extra_models
+# Respect pre-set environment so external model/world packs can be used without
+# editing the source tree (a ROS package that ships its own gz models/worlds can
+# export these before launch). Falls back to the in-tree defaults when unset.
+# NOTE: use a brace-less "$VAR" guard, not shell brace-default expansion.
+# configure_file runs WITHOUT @ONLY, so CMake expands any dollar-brace reference
+# and chokes on the ':' (illegal in a CMake variable name). Bare $VAR is left
+# untouched by CMake. Keep this whole file free of dollar-brace syntax.
+[ -n "$PX4_GZ_MODELS" ]       || export PX4_GZ_MODELS=@PX4_SOURCE_DIR@/Tools/simulation/gz/models
+[ -n "$PX4_GZ_WORLDS" ]       || export PX4_GZ_WORLDS=@PX4_SOURCE_DIR@/Tools/simulation/gz/worlds
+[ -n "$PX4_GZ_EXTRA_MODELS" ] || export PX4_GZ_EXTRA_MODELS=@PX4_SOURCE_DIR@/Tools/simulation/gz_extra_models
 export PX4_GZ_PLUGINS=@PX4_BINARY_DIR@/src/modules/simulation/gz_plugins
 export PX4_GZ_SERVER_CONFIG=@PX4_SOURCE_DIR@/src/modules/simulation/gz_bridge/server.config
 

@@ -158,26 +158,6 @@ if [ -n "${PX4_SIM_MODEL#*gz_}" ] && [ -z "${PX4_GZ_MODEL_NAME}" ]; then
 		exit 1
 	fi
 
-	# Re-roll the traversal gate about its opening normal if requested. The gate
-	# is included in charpi_gate.sdf at roll 45 / yaw 135 deg; GATE_ROLL_DEG (deg)
-	# overrides ONLY the roll (position 0,0,1.9 + yaw 135 kept) so the policy +
-	# the tttN standby can be matched to it.
-	if [ -n "${GATE_ROLL_DEG}" ]; then
-		g_roll=$(awk -v d="${GATE_ROLL_DEG}" 'BEGIN{printf "%.9f", d*3.14159265358979/180.0}')
-		g_yaw="2.356194490192345"
-		g_q=$(awk -v r="${g_roll}" -v y="${g_yaw}" 'BEGIN{
-			cr=cos(r/2); sr=sin(r/2); cy=cos(y/2); sy=sin(y/2);
-			printf "%.9f %.9f %.9f %.9f", cr*cy, sr*cy, sr*sy, cr*sy }')
-		g_qw=$(echo "${g_q}" | awk '{print $1}')
-		g_qx=$(echo "${g_q}" | awk '{print $2}')
-		g_qy=$(echo "${g_q}" | awk '{print $3}')
-		g_qz=$(echo "${g_q}" | awk '{print $4}')
-		${gz_command} service -s "/world/${PX4_GZ_WORLD}/set_pose" --reqtype gz.msgs.Pose \
-			--reptype gz.msgs.Boolean --timeout 3000 \
-			--req "name: \"gate\", position: { x: 0, y: 0, z: 1.9 }, orientation: { w: ${g_qw}, x: ${g_qx}, y: ${g_qy}, z: ${g_qz} }" > /dev/null 2>&1
-		echo "INFO  [init] Gate rolled to ${GATE_ROLL_DEG} deg (yaw 135)"
-	fi
-
 	# Set physics parameters for faster-than-realtime simulation if needed
 	if [ -n "${PX4_SIM_SPEED_FACTOR}" ]; then
 		echo "INFO  [init] Setting simulation speed factor: ${PX4_SIM_SPEED_FACTOR}"
